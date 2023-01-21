@@ -52,9 +52,8 @@ task(:ci).clear.enhance %w[
 desc 'Ensure that rbenv or rvm are set up in PATH'
 task :rbenv_rvm_setup do
   path = ENV.fetch('PATH', nil)
-  puts ENV.fetch('PATH')
   if !path.include?('.rbenv') && !path.include?('.rvm')
-    puts 'foo'
+    raise RuntimeError 'Must have rbenv or rvm in PATH'
   end
 end
 
