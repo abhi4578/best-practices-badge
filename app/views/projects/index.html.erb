@@ -21,7 +21,7 @@
 <% provide :nav_extras do %>
   <li>
     <% if logged_in? %>
-      <%= link_to Icon[:'fa-plus'] + t('.add_link'), new_project_path %>
+      <%= link_to "#{Icon[:'fa-plus']}#{t('.add_link')}", new_project_path %>
     <% end %>
   </li>
 <% end %>
